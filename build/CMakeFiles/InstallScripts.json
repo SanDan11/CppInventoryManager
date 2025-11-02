@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/CppInventoryManager/CppInventoryManager/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

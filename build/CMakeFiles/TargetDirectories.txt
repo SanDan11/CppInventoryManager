@@ -1,0 +1,3 @@
+C:/CppInventoryManager/CppInventoryManager/build/CMakeFiles/CppInventoryManager.dir
+C:/CppInventoryManager/CppInventoryManager/build/CMakeFiles/ALL_BUILD.dir
+C:/CppInventoryManager/CppInventoryManager/build/CMakeFiles/ZERO_CHECK.dir
