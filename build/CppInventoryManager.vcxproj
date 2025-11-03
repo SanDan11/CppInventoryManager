@@ -361,6 +361,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\CppInventoryManager\CppInventoryManager\src\main.cpp" />
+    <ClCompile Include="C:\CppInventoryManager\CppInventoryManager\src\item.cpp" />
+    <ClCompile Include="C:\CppInventoryManager\CppInventoryManager\src\inventory_Manager.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -4,6 +4,12 @@
     <ClCompile Include="C:\CppInventoryManager\CppInventoryManager\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\CppInventoryManager\CppInventoryManager\src\item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\CppInventoryManager\CppInventoryManager\src\inventory_Manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\CppInventoryManager\CppInventoryManager\CMakeLists.txt" />
