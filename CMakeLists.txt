@@ -9,11 +9,6 @@ add_executable(CppInventoryManager
     src/inventory_Manager.cpp
 )
 
-set(SQLite3_INCLUDE_DIR "C:/sqlite3")
-set(SQLite3_LIBRARY "C:/sqlite3/sqlite3.lib")
-target_include_directories(CppInventoryManager PUBLIC ${SQLite3_INCLUDE_DIR})
-target_link_libraries(CppInventoryManager ${SQLite3_LIBRARY})
-
 target_include_directories(CppInventoryManager PUBLIC include)
 find_package(SQLite3 REQUIRED)
 target_link_libraries(CppInventoryManager SQLite::SQLite3)
