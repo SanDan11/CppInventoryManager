@@ -2,7 +2,7 @@
 
 void InventoryManager::addItem(const Item& item) {
     items.push_back(item);
-    std::cout << "✅ Added: " << item.name << " (" << item.category << ")" << std::endl; 
+    std::cout << "Added: " << item.name << " (" << item.category << ")" << std::endl; 
 }
 
 void InventoryManager::listItems() const {
@@ -27,17 +27,17 @@ void InventoryManager::removeItem(int id) {
             return;
         }
     }
-    std::cout << "⚠️ Item ID " << id << " not found.\n";
+    std::cout << "Item ID " << id << " not found.\n";
 }
 
 void InventoryManager::updateQuantity(int id, int newQuantity) {
     for (auto& item : items) {
         if (item.id == id) {
             item.quantity = newQuantity;
-            std::cout << "🔁 Updated " << item.name << "new qty: " << newQuantity << std::endl;
+            std::cout << "Updated " << item.name << "new qty: " << newQuantity << std::endl;
         }
     }
-    std::cout << " ⚠️ Item ID " << id << " not found.\n";
+    std::cout << " Item ID " << id << " not found.\n";
 }
 
 Item* InventoryManager::findItemByName(const std::string& name) {

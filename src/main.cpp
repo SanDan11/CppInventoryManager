@@ -1,26 +1,25 @@
 #include "inventory_manager.hpp"
+#include "database_manager.hpp"
 
 int main() {
-    std::cout << "🚀 C++ Inventory Manager starting up..." << std::endl;
+    DatabaseManager db;
+    db.open("database/inventory.db");
+    db.createTables();
 
-    InventoryManager manager;
+    // Create
+    Item i1(0, "Stratocaster", "Fender", 1299.99, 5, "Warehouse A");
+    db.insertItem(i1);
 
-    manager.addItem(Item(1, "Stratocaster", "Guitar", 1299.99, 3, "Warehouse A"));
-    manager.addItem(Item(2, "Jazz Bass", "Bass", 1099.50, 4, "Warehouse B"));
-    manager.addItem(Item(3, "JCM800", "Amplifier", 2199.00, 2, "Warehouse A"));
+    // Read
+    for (const auto& item : db.getAllItems())
+        std::cout << item.getName() << " - " << item.getQuantity() << std::endl;
 
-    manager.listItems();
+    // Update
+    db.updateItemQuantity(1, 10);
 
-    manager.updateQuantity(2, 10);
-    manager.removeItem(1);
+    // Delete
+    db.deleteItem(1);
 
-    Item* found = manager.findItemByName("JCM800");
-    if (found) {
-        std::cout << "🔍 found: " << found->name << " in " << found->location << std::endl; 
-    } else {
-        std::cout << "❌ Not found\n";
-    }
-
-
+    db.close();
     return 0;
 }
